@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Amirtaha Pourhaji | Full-Stack Developer",
+    "description": "Personal portfolio of Amirtaha Pourhaji, Full-Stack Developer specialized in Telegram bots, automation, and web architecture."
+  },
+  "nav": {
+    "brand": "POURHAJIDEV"
+  },
+  "hero": {
+    "badge": "Software & Infrastructure Developer",
+    "greeting": "Hi, I am",
+    "name": "Amirtaha Pourhaji",
+    "suffix": "",
+    "role": "Junior Full-Stack Developer",
+    "spec": "Web Dev, Automation & Telegram Bots",
+    "bio": "I am 18 years old and have been actively working in web development and automation tools for the past 3 years. My core focus is on implementing scalable front-end architectures and robust back-end engines. I also have hands-on experience in Linux server administration, basic networking, and security, always aiming to write clean, optimized, and maintainable code."
+  },
+  "metrics": {
+    "exp": "3 Years Experience",
+    "projects": "+20 Projects & Bots",
+    "uptime": "99.9% Server Uptime"
+  },
+  "features": {
+    "title": "Why Work With Me?",
+    "subtitle": "The core values I bring to your next digital product",
+    "items": [
+      {
+        "title": "Rapid & On-Time Delivery",
+        "desc": "Your time is precious. Projects are executed with precise planning and delivered exactly on deadline without compromising quality."
+      },
+      {
+        "title": "Flexible & Installment Payments",
+        "desc": "To help you manage your financial resources better, milestone-based and installment payment options are available for large scale projects."
+      },
+      {
+        "title": "Dedicated 24/7 Support",
+        "desc": "Our collaboration doesn't end at deployment. I provide guaranteed technical support, bug fixing, and continuous server monitoring."
+      },
+      {
+        "title": "Clean & Scalable Architecture",
+        "desc": "Leveraging the latest software engineering patterns. My code doesn't just run fast today—it's built to scale seamlessly in the future."
+      }
+    ]
+  },
+  "timeline": {
+    "title": "My Professional Journey",
+    "subtitle": "A summary of my growth and milestones in the software development world",
+    "item1_title": "Telegram Bots & Automation Tools",
+    "item1_desc": "Designed and deployed high-performance group management bots and task automation scripts using modular architectures under Node.js and structured databases.",
+    "item2_title": "Front-End Engineering & Localization",
+    "item2_desc": "Crafted dynamic and responsive user interfaces using React and Next.js, optimizing core web vitals and implementing strict routing-based internationalization.",
+    "item3_title": "Server Administration & Infrastructure",
+    "item3_desc": "Deployed applications on Linux servers, configured web servers, secured network communications, and established robust back-end monitoring systems."
+  },
+  "skills": {
+    "title": "Tech Stack & Skills",
+    "subtitle": "The tools and architectures I use to bring ideas to life"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Projects just for portfolio ( these designs created, just for portfolio )",
+    "view": "Click to explore",
+    "projects": [
+      {
+        "id": "radium",
+        "title": "Radium Botique",
+        "category": "E-Commerce / Minimal UI",
+        "images": [
+          "/images/projects/radium-1.jpg",
+          "/images/projects/radium-2.jpg",
+          "/images/projects/radium-3.jpg",
+          "/images/projects/radium-4.jpg",
+          "/images/projects/radium-5.jpg",
+          "/images/projects/radium-6.jpg"
+        ]
+      },
+      {
+        "id": "perfume",
+        "title": "Twin Perfumes",
+        "category": "UI/UX / Static Website",
+        "images": [
+          "/images/projects/twin-1.jpg",
+          "/images/projects/twin-2.jpg",
+          "/images/projects/twin-3.jpg",
+          "/images/projects/twin-4.jpg",
+          "/images/projects/twin-5.jpg"
+        ]
+      },
+      {
+        "id": "watch",
+        "title": "Aura Watches",
+        "category": "Landing Page",
+        "images": [
+          "/images/projects/aura-1.jpg",
+          "/images/projects/aura-2.jpg",
+          "/images/projects/aura-3.jpg",
+          "/images/projects/aura-4.jpg",
+          "/images/projects/aura-5.jpg"
+        ]
+      },
+      {
+        "id": "geloria",
+        "title": "Gloria Skincare",
+        "category": "E-Commerce / UI/UX",
+        "images": [
+          "/images/projects/gloria-1.jpg",
+          "/images/projects/gloria-2.jpg",
+          "/images/projects/gloria-3.jpg",
+          "/images/projects/gloria-4.jpg",
+          "/images/projects/gloria-5.jpg"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Recent Projects",
+    "subtitle": "A showcase of my recent backend and frontend developments",
+    "liveBtn": "View Project"
+  }
+}
