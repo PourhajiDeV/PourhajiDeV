@@ -15,7 +15,7 @@ const iranSans = localFont({
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dictionary = await import(`../../dictionaries/${lang}.json`).then((module) => module.default);
-  const ogImage = 'https://pourhajidev.ir/images/og-image.jpg';
+  const ogImage = 'https://pourhajidev.ir/images/og-image.png';
   const ogLocale = lang === 'fa' ? 'fa_IR' : 'en_US';
   
   return {
