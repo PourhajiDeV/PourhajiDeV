@@ -102,7 +102,7 @@ export default function Portfolio({ dictionary }) {
   };
 
   return (
-    <section className="w-full py-32 bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-zinc-900 selection:text-zinc-50 dark:selection:bg-zinc-100 dark:selection:text-zinc-900 min-h-screen flex flex-col justify-center transition-colors duration-500">
+    <section id="portfolio" className="w-full py-32 bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-zinc-900 selection:text-zinc-50 dark:selection:bg-zinc-100 dark:selection:text-zinc-900 min-h-screen flex flex-col justify-center transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-16 flex flex-col items-center text-center">
         <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-b from-zinc-900 to-zinc-400 dark:from-white dark:to-zinc-600">
           {dictionary.portfolio.title}
