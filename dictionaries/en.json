@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Amirtaha Pourhaji | Full-Stack Developer",
-    "description": "Personal portfolio of Amirtaha Pourhaji, Full-Stack Developer specialized in Telegram bots, automation, and web architecture."
+    "title": "Amirtaha Pourhaji (PourhajiDeV) | Web Developer & Custom Websites",
+    "description": "Portfolio of Amirtaha Pourhaji, Full-Stack Developer specializing in custom e-commerce websites, Telegram bots, and web architecture."
   },
   "nav": {
     "brand": "POURHAJIDEV"
@@ -11,7 +11,7 @@
     "greeting": "Hi, I am",
     "name": "Amirtaha Pourhaji",
     "suffix": "",
-    "role": "Junior Full-Stack Developer",
+    "role": "Full-Stack Web Developer",
     "spec": "Web Dev, Automation & Telegram Bots",
     "bio": "I am 18 years old and have been actively working in web development and automation tools for the past 3 years. My core focus is on implementing scalable front-end architectures and robust back-end engines. I also have hands-on experience in Linux server administration, basic networking, and security, always aiming to write clean, optimized, and maintainable code."
   },
@@ -58,12 +58,12 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Projects just for portfolio ( these designs created, just for portfolio )",
+    "subtitle": "Selected custom e-commerce web applications and UI designs for online brands",
     "view": "Click to explore",
     "projects": [
       {
         "id": "radium",
-        "title": "Radium Botique",
+        "title": "Radium Boutique",
         "category": "E-Commerce / Minimal UI",
         "images": [
           "/images/projects/radium-1.jpg",

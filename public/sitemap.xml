@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.schemas.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://pourhajidev.ir/fa</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pourhajidev.ir/fa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pourhajidev.ir/en"/>
+  </url>
+
+  <url>
+    <loc>https://pourhajidev.ir/en</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pourhajidev.ir/fa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pourhajidev.ir/en"/>
+  </url>
+
+</urlset>
