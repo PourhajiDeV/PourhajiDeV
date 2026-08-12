@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>EDGE CAFE | Premium Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
+
+        :root {
+            --bg-base: #000000;
+            --bg-glass: rgba(28, 28, 30, 0.65);
+            --bg-element: rgba(255, 255, 255, 0.06);
+            --text-primary: #ffffff;
+            --text-secondary: #8e8e93;
+            --accent: #0a84ff;
+            --accent-alpha: rgba(10, 132, 255, 0.2);
+            --border-light: rgba(255, 255, 255, 0.08);
+            --radius-xl: 32px;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --blur-heavy: blur(30px);
+            --font-main: 'Vazirmatn', -apple-system, sans-serif;
+            --img-ratio: 1.2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-main); -webkit-tap-highlight-color: transparent; }
+
+        body {
+            background-color: var(--bg-base); color: var(--text-primary);
+            min-height: 100dvh; overflow-x: hidden; padding-bottom: 120px;
+            transition: background-color 0.4s ease;
+        }
+
+        .wrapper { width: 100%; max-width: 800px; margin: 0 auto; padding: 0 16px; }
+
+        /* Floating Header */
+        header { position: sticky; top: 16px; z-index: 100; margin-bottom: 24px; transition: transform 0.3s ease; }
+        .floating-nav {
+            background: var(--bg-glass);
+            backdrop-filter: var(--blur-heavy); -webkit-backdrop-filter: var(--blur-heavy);
+            border: 1px solid var(--border-light);
+            border-radius: 100px; padding: 8px 8px 8px 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: var(--shadow-glass);
+        }
+        .brand-zone { display: flex; align-items: center; gap: 12px; }
+        .logo-box {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: var(--accent); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 900; font-size: 1.2rem;
+            box-shadow: 0 4px 20px var(--accent-alpha);
+        }
+        .brand-text h1 { font-size: 1rem; font-weight: 900; letter-spacing: 0.5px; margin-bottom: 2px; line-height: 1; }
+        .brand-text p { font-size: 0.7rem; color: var(--text-secondary); font-weight: 500; }
+
+        .design-btn {
+            background: var(--bg-element); border: 1px solid var(--border-light);
+            color: var(--text-primary); padding: 10px 16px; border-radius: 100px;
+            font-size: 0.8rem; font-weight: 700; cursor: pointer;
+            display: flex; align-items: center; gap: 6px; transition: all 0.2s;
+        }
+        .design-btn:active { transform: scale(0.94); background: var(--border-light); }
+        .icon { width: 18px; height: 18px; fill: currentColor; }
+
+        /* Modern Search */
+        .search-container { position: relative; margin-bottom: 20px; }
+        .search-input {
+            width: 100%; background: var(--bg-element);
+            border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+            padding: 16px 48px 16px 20px; color: var(--text-primary);
+            font-size: 0.95rem; font-weight: 500; outline: none; transition: all 0.3s;
+        }
+        .search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-alpha); background: var(--bg-glass); }
+        .search-icon { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--text-secondary); pointer-events: none; }
+
+        /* Smooth Categories */
+        .category-scroll {
+            position: sticky; top: 88px; z-index: 90;
+            margin: 0 -16px 24px; padding: 10px 16px;
+            background: linear-gradient(180deg, var(--bg-base) 40%, transparent 100%);
+        }
+        .category-list {
+            display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none;
+            -webkit-overflow-scrolling: touch; padding-bottom: 4px;
+        }
+        .category-list::-webkit-scrollbar { display: none; }
+        .cat-item {
+            background: var(--bg-glass); border: 1px solid var(--border-light);
+            backdrop-filter: var(--blur-heavy); -webkit-backdrop-filter: var(--blur-heavy);
+            color: var(--text-secondary); padding: 10px 20px; border-radius: 100px;
+            font-size: 0.85rem; font-weight: 700; white-space: nowrap;
+            cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 6px;
+        }
+        .cat-item.active { background: var(--text-primary); color: var(--bg-base); border-color: var(--text-primary); }
+
+        /* Bento Grid Menu */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .menu-card {
+            background: var(--bg-element); border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl); overflow: hidden;
+            display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .menu-card:active { transform: scale(0.98); }
+        .card-media { position: relative; width: 100%; aspect-ratio: var(--img-ratio); overflow: hidden; }
+        .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .menu-card:hover .card-media img { transform: scale(1.05); }
+        .badge {
+            position: absolute; top: 12px; right: 12px;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            color: var(--text-primary); border: 1px solid var(--border-light);
+            padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;
+        }
+
+        .card-content { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+        .card-title { font-size: 1.1rem; font-weight: 900; line-height: 1.4; color: var(--text-primary); }
+        .card-price { font-size: 1rem; font-weight: 900; color: var(--accent); white-space: nowrap; }
+        .card-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+
+        .add-btn {
+            width: 100%; background: var(--bg-glass); border: 1px solid var(--border-light);
+            color: var(--text-primary); padding: 12px; border-radius: var(--radius-md);
+            font-size: 0.9rem; font-weight: 700; cursor: pointer;
+            display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.2s;
+        }
+        .add-btn:active { background: var(--accent); border-color: var(--accent); transform: scale(0.97); }
+
+        /* Smart Cart Bar */
+        .cart-floating {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(150%);
+            width: calc(100% - 32px); max-width: 400px;
+            background: var(--bg-glass); backdrop-filter: var(--blur-heavy); -webkit-backdrop-filter: var(--blur-heavy);
+            border: 1px solid var(--border-light); border-radius: 100px;
+            padding: 8px 8px 8px 24px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6); z-index: 200; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .cart-floating.visible { transform: translateX(-50%) translateY(0); }
+        .cart-details { display: flex; flex-direction: column; }
+        .cart-lbl { font-size: 0.7rem; color: var(--text-secondary); font-weight: 500; }
+        .cart-val { font-size: 1rem; font-weight: 900; color: var(--text-primary); }
+        .checkout-btn {
+            background: var(--text-primary); color: var(--bg-base); border: none;
+            padding: 14px 24px; border-radius: 100px; font-weight: 900; font-size: 0.9rem;
+            cursor: pointer; display: flex; align-items: center; gap: 8px;
+        }
+
+        /* Pro Drawer Studio */
+        .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 300; }
+        .overlay.active { opacity: 1; pointer-events: all; }
+
+        .studio-drawer {
+            position: fixed; bottom: 0; left: 0; width: 100%; max-height: 85dvh;
+            background: var(--bg-glass); backdrop-filter: var(--blur-heavy); -webkit-backdrop-filter: var(--blur-heavy);
+            border-top: 1px solid var(--border-light); border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+            z-index: 400; transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            display: flex; flex-direction: column; box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
+        }
+        .studio-drawer.active { transform: translateY(0); }
+
+        .drawer-head {
+            padding: 20px 24px; border-bottom: 1px solid var(--border-light);
+            display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0;
+        }
+        .drawer-head h2 { font-size: 1.1rem; font-weight: 900; }
+        .close-btn {
+            width: 32px; height: 32px; border-radius: 50%; background: var(--bg-element);
+            border: 1px solid var(--border-light); color: var(--text-primary);
+            display: flex; justify-content: center; align-items: center; cursor: pointer;
+        }
+
+        .drawer-body { padding: 24px; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: 60px; }
+        .setting-block { margin-bottom: 24px; }
+        .setting-block h3 { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        .color-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+        .color-swatch {
+            width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+            border: 2px solid transparent; transition: transform 0.2s; position: relative;
+        }
+        .color-swatch.active { border-color: var(--text-primary); transform: scale(1.1); }
+        .color-swatch input { opacity: 0; position: absolute; inset: 0; width: 100%; height: 100%; cursor: pointer; }
+
+        .pill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; }
+        .pill-btn {
+            background: var(--bg-element); border: 1px solid var(--border-light);
+            padding: 12px; border-radius: var(--radius-md); text-align: center;
+            color: var(--text-primary); font-size: 0.85rem; font-weight: 700;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .pill-btn.active { background: var(--text-primary); color: var(--bg-base); }
+
+        /* ULTRA LUXURY FOOTER CREDIT */
+        .footer-credit { padding: 40px 16px 60px; display: flex; justify-content: center; position: relative; z-index: 10; }
+
+        .dev-card {
+            position: relative; display: flex; align-items: center; gap: 16px;
+            padding: 12px 24px; border-radius: 100px;
+            background: rgba(20, 20, 22, 0.8);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            text-decoration: none; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Animated Neon Border Magic */
+        .dev-card::before {
+            content: ''; position: absolute; inset: -2px; z-index: -1;
+            background: conic-gradient(from 0deg, transparent 0%, var(--accent) 25%, transparent 50%);
+            animation: rotateBorder 4s linear infinite;
+            border-radius: 100px;
+        }
+        .dev-card::after {
+            content: ''; position: absolute; inset: 2px;
+            background: rgba(15, 15, 18, 0.95);
+            border-radius: 100px; z-index: -1;
+        }
+        @keyframes rotateBorder { 100% { transform: rotate(360deg); } }
+
+        .dev-card:hover { transform: translateY(-5px) scale(1.02); }
+        .dev-card:active { transform: scale(0.95); }
+
+        .dev-icon {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--bg-element), rgba(255,255,255,0.1));
+            border: 1px solid var(--border-light); color: var(--text-primary);
+            display: flex; align-items: center; justify-content: center;
+            font-family: monospace; font-weight: 900; font-size: 1rem;
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+        }
+        .dev-info { display: flex; flex-direction: column; text-align: right; }
+        .dev-info span:first-child { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 2px; }
+        .dev-info span:last-child {
+            font-size: 1.05rem; font-weight: 900; letter-spacing: 0.5px;
+            background: linear-gradient(to right, #fff, var(--text-secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 600px) {
+            .menu-grid { grid-template-columns: 1fr; gap: 16px; }
+            :root { --img-ratio: 1.5; }
+            .card-title { font-size: 1rem; }
+            .card-content { padding: 16px; }
+            .floating-nav { padding: 6px 6px 6px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="floating-nav">
+                <div class="brand-zone">
+                    <div class="logo-box">E</div>
+                    <div class="brand-text">
+                        <h1>EDGE CAFE</h1>
+                        <p>میز شماره ۷</p>
+                    </div>
+                </div>
+                <button class="design-btn" onclick="toggleStudio()">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61.43.53.29 1.32-.31 1.68C3.6 19.92 3 20.91 3 22c0 .55.45 1 1 1h5.03c.42 0 .79-.26.93-.66l.72-2.07c.22-.63.82-1.06 1.49-1.06h1.66c.67 0 1.27.43 1.49 1.06l.72 2.07c.14.4.51.66.93.66H20c.55 0 1-.45 1-1 0-1.09-.6-2.08-1.66-2.71-.6-.36-.74-1.15-.31-1.68C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                    دیزاین
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="جستجو در منو..." oninput="filterItems()">
+                <svg class="icon search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+
+            <div class="category-scroll">
+                <div class="category-list" id="catContainer">
+                    <div class="cat-item active" onclick="filterCategory('all', this)">همه موارد</div>
+                    <div class="cat-item" onclick="filterCategory('hot-coffee', this)">قهوه گرم</div>
+                    <div class="cat-item" onclick="filterCategory('cold-coffee', this)">قهوه سرد</div>
+                    <div class="cat-item" onclick="filterCategory('dessert', this)">کیک و دسر</div>
+                    <div class="cat-item" onclick="filterCategory('drink', this)">نوشیدنی خنک</div>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menuGrid"></div>
+        </main>
+    </div>
+
+    <!-- Smart Cart -->
+    <div class="cart-floating" id="cartFloating">
+        <div class="cart-details">
+            <span class="cart-lbl">جمع کل (<span id="cartCount">0</span> آیتم)</span>
+            <span class="cart-val" id="cartTotal">0 تومان</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">
+            تکمیل سفارش
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </button>
+    </div>
+
+    <!-- Pro Design Studio Drawer -->
+    <div class="overlay" id="overlay" onclick="toggleStudio()"></div>
+    <div class="studio-drawer" id="studioDrawer">
+        <div class="drawer-head">
+            <h2>استودیو دیزاین (Pro)</h2>
+            <button class="close-btn" onclick="toggleStudio()">✕</button>
+        </div>
+        <div class="drawer-body">
+
+            <div class="setting-block">
+                <h3>رنگ سازمانی (Accent Color)</h3>
+                <div class="color-grid">
+                    <div class="color-swatch active" style="background: #0a84ff;" onclick="setAccent('#0a84ff', this)"></div>
+                    <div class="color-swatch" style="background: #ff9f0a;" onclick="setAccent('#ff9f0a', this)"></div>
+                    <div class="color-swatch" style="background: #ff375f;" onclick="setAccent('#ff375f', this)"></div>
+                    <div class="color-swatch" style="background: #32ade6;" onclick="setAccent('#32ade6', this)"></div>
+                    <div class="color-swatch" style="background: #bf5af2;" onclick="setAccent('#bf5af2', this)"></div>
+                    <div class="color-swatch" style="background: #30d158;" onclick="setAccent('#30d158', this)"></div>
+                    <div class="color-swatch" style="background: conic-gradient(red, yellow, green, cyan, blue, magenta);">
+                        <input type="color" value="#0a84ff" onchange="setAccent(this.value, this.parentElement)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="setting-block">
+                <h3>تم پس‌زمینه (Theme)</h3>
+                <div class="pill-grid">
+                    <button class="pill-btn active" onclick="setTheme('pitch-dark', this)">مشکی عمیق</button>
+                    <button class="pill-btn" onclick="setTheme('glass-grey', this)">خاکستری شیشه‌ای</button>
+                    <button class="pill-btn" onclick="setTheme('midnight', this)">سرمه‌ای تاریک</button>
+                    <button class="pill-btn" onclick="setTheme('warm-light', this)">روشن مینیمال</button>
+                </div>
+            </div>
+
+            <div class="setting-block">
+                <h3>حالت نمایش عکس‌ها (Aspect Ratio)</h3>
+                <div class="pill-grid">
+                    <button class="pill-btn" onclick="setRatio('1', this)">مربع (1:1)</button>
+                    <button class="pill-btn active" onclick="setRatio('1.2', this)">استاندارد</button>
+                    <button class="pill-btn" onclick="setRatio('1.8', this)">واید (سینمایی)</button>
+                </div>
+            </div>
+
+            <div class="setting-block">
+                <h3>گردی حاشیه‌ها (Border Radius)</h3>
+                <div class="pill-grid">
+                    <button class="pill-btn active" onclick="setBorder('32px', this)">مدرن (Apple)</button>
+                    <button class="pill-btn" onclick="setBorder('16px', this)">کلاسیک</button>
+                    <button class="pill-btn" onclick="setBorder('0px', this)">تیز (Sharp)</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Premium Footer Credit -->
+    <div class="footer-credit">
+        <a href="https://pourhajidev.ir" target="_blank" rel="noopener noreferrer" class="dev-card">
+            <div class="dev-icon">&lt;/&gt;</div>
+            <div class="dev-info">
+                <span>Created By</span>
+                <span>PourhajiDeV</span>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        const menuData = [
+            { id: 1, name: "اسپرسو سینگل اورجین", category: "hot-coffee", price: 75000, desc: "دانه‌های ۱۰۰٪ عربیکا تخصصی، با طعم‌یادهای شکلات تلخ و مرکبات تازه.", badge: "Signature", img: "uploads/espresso.jpeg" },
+            { id: 2, name: "کاپوچینو ابریشم", category: "hot-coffee", price: 105000, desc: "ترکیب اسپرسو دوبل با شیر مخملی بخار داده شده و فوم متراکم هنری.", badge: "Popular", img: "uploads/capuccino.jpeg" },
+            { id: 3, name: "کارامل ماکیاتو یخی", category: "cold-coffee", price: 125000, desc: "شیر سرد، یخ بلوری، اسپرسو لایه‌ای و سس کارامل دست‌ساز غلیظ.", badge: "Ice Cold", img: "uploads/caramel-maciato.jpeg" },
+            { id: 4, name: "کلد برو نیترو", category: "cold-coffee", price: 130000, desc: "قهوه دمی سرد ۱۴ ساعته، تزریق شده با نیتروژن برای بافتی کرمی و نرم.", badge: "Pro Choice", img: "uploads/caramel-maciato.jpeg" },
+            { id: 5, name: "ترافل دارک چاکلت", category: "dessert", price: 145000, desc: "کیک شکلاتی متراکم غنی شده با گاناش ۷۰٪ فرانسوی و مغز فندق بو داده.", badge: "Fresh", img: "uploads/chocolate-cake.jpeg" },
+            { id: 6, name: "چیزکیک سن‌سباستین", category: "dessert", price: 165000, desc: "چیزکیک تنوری با رویه کاراملیزه شده و بافت کرمی به همراه سس توت‌فرنگی.", badge: "Premium", img: "uploads/piece-cake.jpeg" }
+        ];
+
+        let cart = {};
+        let currentCat = 'all';
+
+        function renderDOM(items) {
+            const grid = document.getElementById('menuGrid');
+            grid.innerHTML = items.map(item => `
+                <div class="menu-card">
+                    <div class="card-media">
+                        <img src="${item.img}" alt="${item.name}" loading="lazy">
+                        <div class="badge">${item.badge}</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="card-title">${item.name}</h3>
+                            <span class="card-price">${item.price.toLocaleString('fa-IR')} </span>
+                        </div>
+                        <p class="card-desc">${item.desc}</p>
+                        <button class="add-btn" onclick="add(${item.id})">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                            افزودن به سفارش
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCategory(cat, el) {
+            currentCat = cat;
+            document.querySelectorAll('.cat-item').forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
+            execFilter();
+        }
+
+        function filterItems() { execFilter(); }
+
+        function execFilter() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            const res = menuData.filter(i =>
+                (currentCat === 'all' || i.category === currentCat) &&
+                (i.name.includes(q) || i.desc.includes(q))
+            );
+            renderDOM(res);
+        }
+
+        function add(id) {
+            if(cart[id]) cart[id].qty++; else cart[id] = {...menuData.find(m=>m.id===id), qty:1};
+            updateCart();
+        }
+
+        function updateCart() {
+            const qty = Object.values(cart).reduce((a,b)=>a+b.qty, 0);
+            const sum = Object.values(cart).reduce((a,b)=>a+(b.price*b.qty), 0);
+            const bar = document.getElementById('cartFloating');
+
+            if(qty > 0) {
+                bar.classList.add('visible');
+                document.getElementById('cartCount').innerText = qty.toLocaleString('fa-IR');
+                document.getElementById('cartTotal').innerText = sum.toLocaleString('fa-IR') + ' تومان';
+            } else {
+                bar.classList.remove('visible');
+            }
+        }
+
+        function checkout() {
+            let msg = "سفارش جدید (میز ۷):\n\n";
+            Object.values(cart).forEach(i => msg += `▪ ${i.name} (${i.qty}x)\n`);
+            const total = Object.values(cart).reduce((a,b)=>a+(b.price*b.qty), 0);
+            msg += `\nجمع کل: ${total.toLocaleString('fa-IR')} تومان`;
+            window.open(`https://wa.me/989120000000?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        /* --- PRO STUDIO LOGIC --- */
+        function toggleStudio() {
+            document.getElementById('studioDrawer').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+
+        function updateActiveBtn(el) {
+            el.parentElement.querySelectorAll('.pill-btn, .color-swatch').forEach(e => e.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        function setAccent(color, el) {
+            document.documentElement.style.setProperty('--accent', color);
+            document.documentElement.style.setProperty('--accent-alpha', hexToRgba(color, 0.2));
+            if(el) updateActiveBtn(el);
+        }
+
+        function hexToRgba(hex, alpha) {
+            let r=0, g=0, b=0;
+            if(hex.length===7) { r = parseInt(hex.slice(1,3),16); g = parseInt(hex.slice(3,5),16); b = parseInt(hex.slice(5,7),16); }
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        function setRatio(val, el) {
+            document.documentElement.style.setProperty('--img-ratio', val);
+            updateActiveBtn(el);
+        }
+
+        function setBorder(val, el) {
+            document.documentElement.style.setProperty('--radius-xl', val);
+            document.documentElement.style.setProperty('--radius-lg', `calc(${val} * 0.75)`);
+            document.documentElement.style.setProperty('--radius-md', `calc(${val} * 0.5)`);
+            updateActiveBtn(el);
+        }
+
+        function setTheme(type, el) {
+            updateActiveBtn(el);
+            const root = document.documentElement.style;
+            const themes = {
+                'pitch-dark': { base: '#000000', glass: 'rgba(28,28,30,0.65)', el: 'rgba(255,255,255,0.06)', text: '#ffffff', sub: '#8e8e93', border: 'rgba(255,255,255,0.08)' },
+                'glass-grey': { base: '#1c1c1e', glass: 'rgba(44,44,46,0.7)', el: 'rgba(255,255,255,0.08)', text: '#ffffff', sub: '#a1a1a6', border: 'rgba(255,255,255,0.1)' },
+                'midnight':   { base: '#060a14', glass: 'rgba(12,20,38,0.7)', el: 'rgba(255,255,255,0.05)', text: '#f0f4f8', sub: '#94a3b8', border: 'rgba(255,255,255,0.08)' },
+                'warm-light': { base: '#f2f2f7', glass: 'rgba(255,255,255,0.8)', el: '#ffffff', text: '#000000', sub: '#3a3a3c', border: 'rgba(0,0,0,0.08)' }
+            };
+            const t = themes[type];
+            root.setProperty('--bg-base', t.base);
+            root.setProperty('--bg-glass', t.glass);
+            root.setProperty('--bg-element', t.el);
+            root.setProperty('--text-primary', t.text);
+            root.setProperty('--text-secondary', t.sub);
+            root.setProperty('--border-light', t.border);
+        }
+
+        renderDOM(menuData);
+    </script>
+</body>
+</html>

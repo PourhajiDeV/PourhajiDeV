@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import Skills from "@/components/Skills";
+import Demos from "@/components/Demos";
 import Portfolio from "@/components/Portfolio";
 import Projects from "@/components/Projects";
 import WhyChooseMe from "@/components/WhyChooseMe";
@@ -37,6 +38,7 @@ export default async function Page({ params }) {
         <WhyChooseMe dict={dict} />
         <Timeline dict={dict} />
         <Skills dict={dict} />
+        <Demos dict={dict} currentLang={lang} />
         <Portfolio dictionary={dict} />
         <Projects dict={dict} currentLang={lang} />
       </main>

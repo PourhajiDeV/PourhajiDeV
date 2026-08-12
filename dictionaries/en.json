@@ -56,6 +56,22 @@
     "title": "Tech Stack & Skills",
     "subtitle": "The tools and architectures I use to bring ideas to life"
   },
+  "demos": {
+    "badge": "Live Demos",
+    "title": "Exclusive Demos",
+    "subtitle": "Interactive live browser-testable demos",
+    "viewBtn": "View Live Demo",
+    "items": [
+      {
+        "id": "edge",
+        "title": "EDGE CAFE Digital Menu",
+        "category": "Digital Menu / PWA",
+        "desc": "An ultra-modern iOS 17 glassmorphic digital menu featuring a live theme studio and a smart cart.",
+        "status": "Live Demo",
+        "link": "/demos/Edge/index.html"
+      }
+    ]
+  },
   "portfolio": {
     "title": "Portfolio",
     "subtitle": "Selected custom e-commerce web applications and UI designs for online brands",

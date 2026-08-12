@@ -18,3 +18,8 @@ yarn-error.log*
 
 .DS_Store
 *.pem
+
+public/demos/**/uploads/
+public/demos/**/*.jpeg
+public/demos/**/*.jpg
+public/demos/**/*.png
