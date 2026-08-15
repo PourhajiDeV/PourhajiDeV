@@ -111,18 +111,6 @@
         ]
       },
       {
-        "id": "watch",
-        "title": "گالری ساعت ائورا",
-        "category": "Landing Page",
-        "images": [
-          "/images/projects/aura-1.jpg",
-          "/images/projects/aura-2.jpg",
-          "/images/projects/aura-3.jpg",
-          "/images/projects/aura-4.jpg",
-          "/images/projects/aura-5.jpg"
-        ]
-      },
-      {
         "id": "geloria",
         "title": "فروشگاه محصولات پوستی",
         "category": "E-Commerce / UI/UX",
