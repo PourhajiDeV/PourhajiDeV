@@ -69,6 +69,14 @@
         "desc": "An ultra-modern iOS 17 glassmorphic digital menu featuring a live theme studio and a smart cart.",
         "status": "Live Demo",
         "link": "/demos/Edge/index.html"
+      },
+      {
+        "id": "aura",
+        "title": "Aura Luxury Watches Store",
+        "category": "E-Commerce / Luxury UI",
+        "desc": "A premium luxury watch store interface featuring emerald-gold aesthetics, instant client-side filtering, interactive product modals, and a dynamic cart flow.",
+        "status": "Live Demo",
+        "link": "/demos/Aura/index.php"
       }
     ]
   },
