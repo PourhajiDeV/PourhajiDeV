@@ -77,6 +77,14 @@
         "desc": "رابط کاربری و فروشگاه آنلاین ساعت‌های لوکس و اورجینال با پالت زمردی-طلایی، فیلترینگ زنده محصولات، مدال جزییات و سبد خرید کامل.",
         "status": "دموی آنلاین",
         "link": "/demos/Aura/index.php"
+      },
+      {
+        "id": "radium",
+        "title": "بوتیک آنلاین رادیوم (Radium)",
+        "category": "پوشاک و استایل شهری / ۲۰۲۷",
+        "desc": "فروشگاه مدرن استایل خیابانی و مینیمال با معماری بنتو، انیمیشن‌های اسکرول‌محور GSAP، لوک‌بوک تعاملی و سیستم خرید هوشمند.",
+        "status": "دموی آنلاین",
+        "link": "/demos/Radium/index.php"
       }
     ]
   },
@@ -85,19 +93,6 @@
     "subtitle": "مجموعه‌ای از پروژه‌ها و قالب‌های فروشگاهی اختصاصی طراحی‌شده برای آنلاین‌شاپ‌ها",
     "view": "کلیک کنید",
     "projects": [
-      {
-        "id": "radium",
-        "title": "رادیوم بوتیک",
-        "category": "E-Commerce / Minimal UI",
-        "images": [
-          "/images/projects/radium-1.jpg",
-          "/images/projects/radium-2.jpg",
-          "/images/projects/radium-3.jpg",
-          "/images/projects/radium-4.jpg",
-          "/images/projects/radium-5.jpg",
-          "/images/projects/radium-6.jpg"
-        ]
-      },
       {
         "id": "perfume",
         "title": "گالری عطر تویین",

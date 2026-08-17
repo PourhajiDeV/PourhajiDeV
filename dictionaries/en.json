@@ -77,6 +77,14 @@
         "desc": "A premium luxury watch store interface featuring emerald-gold aesthetics, instant client-side filtering, interactive product modals, and a dynamic cart flow.",
         "status": "Live Demo",
         "link": "/demos/Aura/index.php"
+      },
+      {
+        "id": "radium",
+        "title": "Radium Boutique Experience",
+        "category": "Streetwear / 2027 Concept",
+        "desc": "An avant-garde urban fashion boutique featuring Bento grid layouts, GSAP scroll-driven animations, an interactive lookbook, and client-side filtering.",
+        "status": "Live Demo",
+        "link": "/demos/Radium/index.php"
       }
     ]
   },
@@ -85,19 +93,6 @@
     "subtitle": "Selected custom e-commerce web applications and UI designs for online brands",
     "view": "Click to explore",
     "projects": [
-      {
-        "id": "radium",
-        "title": "Radium Boutique",
-        "category": "E-Commerce / Minimal UI",
-        "images": [
-          "/images/projects/radium-1.jpg",
-          "/images/projects/radium-2.jpg",
-          "/images/projects/radium-3.jpg",
-          "/images/projects/radium-4.jpg",
-          "/images/projects/radium-5.jpg",
-          "/images/projects/radium-6.jpg"
-        ]
-      },
       {
         "id": "perfume",
         "title": "Twin Perfumes",
