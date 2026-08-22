@@ -5,6 +5,7 @@ import Demos from "@/components/Demos";
 import Portfolio from "@/components/Portfolio";
 import Projects from "@/components/Projects";
 import WhyChooseMe from "@/components/WhyChooseMe";
+import LiveStatus from "@/components/LiveStatus";
 import ThemeToggle from "@/components/ThemeToggle";
 import LangToggle from "@/components/LangToggle";
 import AnimationToggle from "@/components/AnimationToggle";
@@ -35,6 +36,7 @@ export default async function Page({ params }) {
 
       <main className="pb-28" style={{ backgroundColor: "transparent" }}>
         <Hero dict={dict} />
+        <LiveStatus dict={dict} />
         <WhyChooseMe dict={dict} />
         <Timeline dict={dict} />
         <Skills dict={dict} />

@@ -119,5 +119,40 @@
     "title": "Recent Projects",
     "subtitle": "A showcase of my recent backend and frontend developments",
     "liveBtn": "View Project"
+  },
+  "liveStatus": {
+    "badge": "Live Presence & Metrics",
+    "title": "Developer Radar & Ecosystem",
+    "subtitle": "Real-time monitoring across my development environment, music, and communication stack",
+    "spotify": {
+      "tag": "Spotify Live",
+      "listening": "Now Playing",
+      "idleTitle": "Spotify Offline",
+      "idleDesc": "No active playback at the moment",
+      "track": "Active Track"
+    },
+    "comms": {
+      "tag": "Communication Stack",
+      "telegram": "Telegram",
+      "telegramBio": "Full Stack Developer • UI/UX Designer • Java/Python Programmer 🌱💚 - H 🩵",
+      "instagram": "Instagram",
+      "instagramBio": "Software Engineering, Product Design & Tech Lifestyle",
+      "discord": "Discord",
+      "direct": "Send Message",
+      "follow": "Follow",
+      "online": "Online",
+      "idle": "Idle",
+      "dnd": "Focus (DnD)",
+      "offline": "Offline"
+    },
+    "github": {
+      "tag": "GitHub Pulse & Contribution Graph",
+      "repos": "Public Repos",
+      "followers": "Followers",
+      "stars": "Total Stars",
+      "viewProfile": "View GitHub",
+      "graphTitle": "Real-Time Contribution Graph",
+      "graphDesc": "Live monitoring of code commits & repositories throughout the year"
+    }
   }
 }
