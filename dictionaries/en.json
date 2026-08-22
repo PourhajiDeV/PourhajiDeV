@@ -85,6 +85,14 @@
         "desc": "An avant-garde urban fashion boutique featuring Bento grid layouts, GSAP scroll-driven animations, an interactive lookbook, and client-side filtering.",
         "status": "Live Demo",
         "link": "/demos/Radium/index.php"
+      },
+      {
+        "id": "gloria",
+        "title": "Gloria Skin Routine Store",
+        "category": "Clean Skincare / E-Commerce",
+        "desc": "An organic and clean skincare boutique interface featuring silky blush aesthetics, clinical specification drawers, a 4-step routine methodology, and an interactive skin quiz.",
+        "status": "Live Demo",
+        "link": "/demos/Gloria/index.php"
       }
     ]
   },
@@ -103,18 +111,6 @@
           "/images/projects/twin-3.jpg",
           "/images/projects/twin-4.jpg",
           "/images/projects/twin-5.jpg"
-        ]
-      },
-      {
-        "id": "geloria",
-        "title": "Gloria Skincare",
-        "category": "E-Commerce / UI/UX",
-        "images": [
-          "/images/projects/gloria-1.jpg",
-          "/images/projects/gloria-2.jpg",
-          "/images/projects/gloria-3.jpg",
-          "/images/projects/gloria-4.jpg",
-          "/images/projects/gloria-5.jpg"
         ]
       }
     ]

@@ -85,6 +85,14 @@
         "desc": "فروشگاه مدرن استایل خیابانی و مینیمال با معماری بنتو، انیمیشن‌های اسکرول‌محور GSAP، لوک‌بوک تعاملی و سیستم خرید هوشمند.",
         "status": "دموی آنلاین",
         "link": "/demos/Radium/index.php"
+      },
+      {
+        "id": "gloria",
+        "title": "فروشگاه روتین پوستی گلوریا (Gloria)",
+        "category": "آرایشی و بهداشتی / Clean Beauty",
+        "desc": "فروشگاه ارگانیک و مینیمال محصولات مراقبت از پوست با دیزاین زنانه، دراور بررسی تخصصی بالینی، متدولوژی ۴ مرحله‌ای روتین و کوئیز هوشمند پوست.",
+        "status": "دموی آنلاین",
+        "link": "/demos/Gloria/index.php"
       }
     ]
   },
@@ -103,18 +111,6 @@
           "/images/projects/twin-3.jpg",
           "/images/projects/twin-4.jpg",
           "/images/projects/twin-5.jpg"
-        ]
-      },
-      {
-        "id": "geloria",
-        "title": "فروشگاه محصولات پوستی",
-        "category": "E-Commerce / UI/UX",
-        "images": [
-          "/images/projects/gloria-1.jpg",
-          "/images/projects/gloria-2.jpg",
-          "/images/projects/gloria-3.jpg",
-          "/images/projects/gloria-4.jpg",
-          "/images/projects/gloria-5.jpg"
         ]
       }
     ]
