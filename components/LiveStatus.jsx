@@ -418,13 +418,11 @@ export default function LiveStatus({ dict }) {
           </div>
         </div>
 
-        <div className="md:col-span-12 flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-white/70 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800/80 backdrop-blur-2xl shadow-xl relative overflow-hidden group hover:border-amber-500/40 transition-all duration-500">
-          <div className="absolute right-1/3 -bottom-20 w-80 h-80 bg-amber-500/10 dark:bg-amber-500/15 rounded-full blur-3xl pointer-events-none opacity-60"></div>
-          
+        <div className="md:col-span-12 p-6 sm:p-8 rounded-3xl bg-white/70 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800/80 backdrop-blur-2xl shadow-xl relative overflow-hidden group hover:border-amber-500/40 transition-all duration-500">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 relative z-10">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <div className="w-8 h-8 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                 </svg>
               </div>
@@ -452,31 +450,38 @@ export default function LiveStatus({ dict }) {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10 mb-6">
-            <div className="md:col-span-8 flex flex-col justify-center p-4 rounded-2xl bg-zinc-100/60 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800/60 overflow-hidden">
-              <div className="flex items-center justify-between mb-3 px-1">
-                <span className="text-xs font-black text-zinc-800 dark:text-zinc-200">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 relative z-10 mb-6">
+            <div className="lg:col-span-8 flex flex-col justify-between p-5 rounded-2xl bg-zinc-100/60 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800/60 min-h-[220px]">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
                   {dict.liveStatus.github.graphTitle}
                 </span>
-                <span className="text-[10px] font-mono text-emerald-500 font-bold">● Active 2026</span>
+                <span className="text-[10px] font-mono font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                  ● Real-Time
+                </span>
               </div>
-              <div className="w-full overflow-x-auto">
+              <div className="w-full h-full min-h-[160px] flex items-center justify-center overflow-x-auto">
                 <img
-                  src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react-dark&hide_border=true&area=true&color=38bdf8`}
-                  alt="GitHub Activity Graph"
-                  className="w-full min-w-[500px] h-auto object-contain rounded-xl"
+                  src={`https://ghchart.rshah.org/00DC82/${githubUsername}`}
+                  alt="GitHub Contribution Calendar"
+                  className="w-full min-w-[580px] h-auto object-contain brightness-90 contrast-125"
                   loading="lazy"
                 />
               </div>
             </div>
 
-            <div className="md:col-span-4 flex flex-col justify-between p-4 rounded-2xl bg-zinc-100/60 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800/60 overflow-hidden">
-              <img
-                src={`https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=dark&hide_border=true&background=00000000&ring=10B981&fire=10B981&currStreakNum=10B981`}
-                alt="GitHub Streak Stats"
-                className="w-full h-full object-contain"
-                loading="lazy"
-              />
+            <div className="lg:col-span-4 flex flex-col items-center justify-center p-5 rounded-2xl bg-zinc-100/60 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800/60 min-h-[220px]">
+              <span className="text-xs font-bold text-zinc-800 dark:text-zinc-200 mb-3 self-start">
+                Commit Streak
+              </span>
+              <div className="w-full flex-1 flex items-center justify-center">
+                <img
+                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=dark&hide_border=true&background=00000000&ring=10B981&fire=10B981&currStreakNum=10B981&sideNums=A1A1AA&sideLabels=71717A&dates=71717A`}
+                  alt="GitHub Streak"
+                  className="w-full max-h-[150px] object-contain"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
