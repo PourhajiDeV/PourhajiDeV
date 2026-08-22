@@ -96,7 +96,7 @@ export default async function RootLayout({ children, params }) {
     jobTitle: 'طراح سایت و توسعه‌دهنده وب',
     sameAs: [
       'https://github.com/pourhajidev',
-      'https://instagram.com/ilcherik',
+      'https://instagram.com/pourhaji.dev',
       'https://t.me/pourhajidev'
     ],
     knowsAbout: [
