@@ -25,3 +25,4 @@ public/demos/**/*.jpg
 public/demos/**/*.png
 public/demos/**/*.avif
 public/profile.jpg
+public/images/projects/*
