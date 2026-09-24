@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { Coffee, Cpu, ArrowUpRight } from "lucide-react";
+import { Coffee, Cpu, ArrowUpRight, Gem } from "lucide-react";
 
 const iconsMap = {
+  zehnigold: <Gem className="text-amber-400" style={{ backgroundColor: "transparent" }} size={26} />,
   rbl: <Cpu className="text-orange-500" style={{ backgroundColor: "transparent" }} size={26} />,
   karimi: <Coffee className="text-amber-500" style={{ backgroundColor: "transparent" }} size={26} />
 };
