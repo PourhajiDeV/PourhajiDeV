@@ -140,6 +140,14 @@
         "desc": "Bespoke digital interaction menu platform deployed for Karimi Lounge at menu.karimilounge.com. Highly optimized for ultra-fast asset delivery, robust responsive mobile layouts, and premium glassmorphic components.",
         "tags": ["PHP Core", "Vanilla JS", "HTML5", "CSS3"],
         "link": "https://menu.karimilounge.com"
+      },
+      {
+        "id": "zehnigold",
+        "title": "Zehni Gold",
+        "type": "Digital Jewelry Showcase",
+        "desc": "A custom luxury jewelry catalog and digital showroom featuring real-time price estimation driven by live gold market rates and dynamic craftsmanship fees. Built with Next.js architecture, optimized media processing, and hardened with multi-tier Nginx proxy rules.",
+        "tags": ["Next.js", "Tailwind CSS", "REST API", "Gold Price Engine", "Nginx"],
+        "link": "https://zehnigold.com"
       }
     ]
   },
