@@ -3,22 +3,21 @@
 </p>
 
 <h1 align="center">Amirtaha Pourhaji</h1>
-<p align="center"><b>Full-Stack Developer | Security & Network Enthusiast</b></p>
+<p align="center"><b>Full-Stack & AI Integration Engineer | DevTools Specialist</b></p>
 
 <hr>
 
 ## 👨‍💻 About Me
-من امیرطاها هستم، توسعه‌دهنده فول‌استک (18 ساله). در حال حاضر در تیم **DigiiNeo** فعالیت می‌کنم و آماده پذیرش پروژه‌های شخصی و آزاد هستم.
+Full-Stack Engineer specialized in production-grade web applications, developer tooling, and Next.js architectures. Focused on building scalable systems and integrating LLMs into pragmatic engineering workflows.
 
-| 📋 Info | 🚀 Details |
+| 📋 Focus | 🚀 Details |
 | :--- | :--- |
-| **Age** | 18 |
-| **Work** | Active member at **DigiiNeo** |
-| **Status** | Available for Freelance |
-| **Learning** | Cybersecurity, Network+, Spanish |
-| **Languages** | Persian (Native), Turkish/Azeri (Fluent), English (B2), Spanish (Beginner) |
+| **Role** | Full-Stack & AI Integration Engineer |
+| **Status** | Available for Freelance & Contract Work |
+| **Key Projects** | Creator of [TriageOps](https://github.com/PourhajiDeV/TriageOps) |
+| **Languages** | English (Professional Working), Turkish (Fluent), Persian (Native) |
 
-📫 **Contact:** [aghacherik@gmail.com](mailto:aghacherik@gmail.com) | [contact@pourhajidev.ir](mailto:contact@pourhajidev.ir)
+📫 **Connect:** [LinkedIn](https://linkedin.com/in/pourhajidev) | [contact@pourhajidev.com](mailto:contact@pourhajidev.com)
 
 ---
 
@@ -44,17 +43,17 @@
 
 ## 🛠️ Tech Stack
 
-**Frontend & Design**
+**Frontend & Architecture**
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,vscode" />
+  <img src="https://skillicons.dev/icons?i=nextjs,react,typescript,tailwind,vscode" />
 </p>
 
 **Backend & Data**
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,python,django" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,postgres,mongodb,python,django" />
 </p>
 
-**DevOps & Tools**
+**DevOps & Infrastructure**
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=git,docker,aws,linux" />
+  <img src="https://skillicons.dev/icons?i=git,docker,linux,aws" />
 </p>
